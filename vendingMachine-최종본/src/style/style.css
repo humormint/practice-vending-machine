@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+:root {
+  --main-color: #eae8fe;
+}
+
+body {
+  background-color: var(--main-color);
+}
+
+#app {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 28px;
+  padding-top: 248px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+#app .title-logo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  max-width: 386px;
+  height: 180px;
+  background-image: url("../images/Logo_img.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+#app .vending-machine {
+  padding: 31px 27px 28px;
+}
+
+.vending-machine .list-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.vending-machine .list-items li {
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.vending-machine .list-items li:active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #6327fe;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.vending-machine .list-items li.sold-out::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: 60px 46px;
+  background-position: center;
+  background-image: url("../images/Sold-out.png");
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.vending-machine .list-items li.sold-out::after {
+  content: "품절";
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  text-indent: -9999px;
+  line-height: 0;
+  font-size: 1px;
+  color: transparent;
+}
+
+.vending-machine .list-items li.sold-out {
+  pointer-events: none;
+}
+
+.vending-machine .button-item {
+  padding: 11px 0 9px;
+}
+
+.vending-machine .list-items .img-item {
+  width: 36px;
+  margin: 0 auto;
+}
+
+.vending-machine .title-item {
+  display: block;
+  line-height: 13px;
+  font-size: 9px;
+  margin: 6px 0 7px;
+}
+
+.vending-machine .item-price {
+  display: inline-block;
+  padding: 5px 12px;
+  font-size: 12px;
+  background-color: #6327fe;
+  border-radius: 50px;
+  color: #fff;
+}
+
+.container-buy .text-balance,
+.container-buy .input-put,
+.container-buy .list-items {
+  padding: 7px 10px;
+  border-radius: 5px;
+  /* box-sizing: border-box; */
+}
+
+.container-buy .button-return,
+.container-buy .button-put,
+.container-buy .button-get {
+  font-size: 13px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.vending-machine .container-buy {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.container-buy .text-balance {
+  font-size: 14px;
+  grid-column: 1/3;
+  
+}
