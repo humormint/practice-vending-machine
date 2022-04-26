@@ -1,11 +1,8 @@
 @charset "utf-8";
 
-:root {
-  --main-color: #eae8fe;
-}
 
 body {
-  background-color: var(--main-color);
+  background-color: #eae8fe
 }
 
 img-item {
@@ -21,11 +18,11 @@ img-item {
   font-family: "Noto Sans KR", sans-serif;
 }
 
-#app .vending-machine, #app .my-info {
+#app .vending-machine,
+#app .my-info {
   width: 360px;
   background-color: #fff;
   box-sizing: border-box;
-
 }
 
 #app .title-logo {
@@ -128,7 +125,7 @@ img-item {
 
 .container-buy .text-balance,
 .container-buy .input-put,
-.container-buy .list-items {
+.container-buy .list-items-screen {
   padding: 7px 10px;
   border-radius: 5px;
   box-sizing: border-box;
@@ -170,30 +167,101 @@ img-item {
   color: #fff;
 }
 
-.container-buy .list-items {
+.container-buy .list-items-screen {
   grid-column: 1/3;
-  height: 106px;  
+  height: 106px;
   overflow-y: scroll;
   border: 1px solid #bdbdbd;
   background-color: #eae8fe;
 }
 
-/* .list-items li {
+.list-items-screen li {
   padding: 8px;
   border-radius: 5px;
   background-color: #fff;
   box-sizing: border-box;
+}
 
-} */
-
-/* .list-items li + li {
+.list-items-screen li + li {
   margin-top: 6px;
-} */
+}
 
-/* .list-items .img-item, .list-items .text-item {
+.list-items-screen .img-item, .list-items-screen .text-item {
   float: left;
-} */
+}
 
-/* .list-items .img-item {
+.list-items-screen .img-item {
   width: 18px;
-} */
+}
+
+.list-items-screen .text-item {
+  margin-left: 10px;
+  font-size: 9px;
+  line-height: 33px;
+}
+
+.list-items-screen .counter-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  float: right;
+}
+
+#app .my-info {
+  background-color: #eae8fe;
+}
+
+.my-info .container-mymoney {
+  padding: 6px 10px;
+  line-height: 20px;
+  background-color: #fff;
+}
+
+.my-info .text-mymoney {
+  padding: 6px 10px;
+  line-height: 20px;
+  background-color: #eae8fe;
+  border-radius: 5px;
+}
+
+.my-info .number-mymoney {
+  float: right;
+  font-weight: 700;
+}
+
+.my-info .container-items {
+  margin-top: 20px;
+  padding: 25px 27px 32px;
+  background-color: #fff;
+}
+
+.my-info .title-myitem {
+  display: block; 
+  text-align: center;
+  margin-bottom: 13px;
+  font-size: 14px;
+  font-weight: 700;
+
+}
+
+.container-items .list-items-screen {
+  height: 364px;
+  overflow-y: scroll;
+  padding: 12px;
+  background-color: #eae8fe;
+  border: 1px solid #bdbdbd;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.container-items .text-total {
+  display: block; 
+  text-align: right;
+  font-size: 12px;
+  line-height: 17px;
+  margin-top: 10px;
+}
